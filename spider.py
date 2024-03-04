@@ -1,9 +1,5 @@
 '''
-v0.2
-1. 把 main 改为 reply 请求, 以处理需要展开的子评论
-2. 增加数据域: 时间, rpid, root
-3. 修改 headers 和 csv_writer 为全局变量, 且 Cookie 从文件读取
-4. aid 输入方式改为命令行参数
+v1.0 单个视频爬取, 手动获取 aid 和 Cookie
 
 @Description:
     通过 https://api.bilibili.com/x/v2/reply/wbi/main? 请求获取B站某视频评论区的所有评论 (包括子评论)
@@ -13,7 +9,7 @@ v0.2
     输出到 csv 文件 (默认以 aid 命名), 编码为带 BOM 的 UTF-8
 @Author: July
 @Time: 2024/3/2
-@File: spider-bilibili_singleVideo_reply.py
+@File: spider.py
 '''
 from urllib.parse import quote
 import csv
